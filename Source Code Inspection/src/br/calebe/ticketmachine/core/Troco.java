@@ -1,3 +1,7 @@
+/*
+Eduardo Hiroyuki Tamaributi - 10417776
+Ciro Campos de Carvalho - 10418360
+*/
 package br.calebe.ticketmachine.core;
 
 import java.util.Iterator;
@@ -8,11 +12,18 @@ import java.util.Iterator;
  */
 class Troco {
 
+    /*
+    Defeito de Estrutura de Dados - a Array está sendo sobreescrito de forma errada
+
+    */
     protected PapelMoeda[] papeisMoeda;
 
     public Troco(int valor) {
         papeisMoeda = new PapelMoeda[6];
         int count = 0;
+        /*
+        Defeito de Controle - O while está mal definido para contar quantas notas de cada tipo são necessárias
+        */
         while (valor % 100 != 0) {
             count++;
         }
