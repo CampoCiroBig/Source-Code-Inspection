@@ -1,3 +1,8 @@
+/*
+Eduardo Hiroyuki Tamaributi - 10417776
+Ciro Campos de Carvalho - 10418360
+*/
+
 package br.calebe.ticketmachine.core;
 
 /**
@@ -10,6 +15,9 @@ public class PapelMoeda {
     protected int quantidade;
 
     public PapelMoeda(int valor, int quantidade) {
+    /*
+    Defeito de Interface - Os dados não estão sendo validados
+    */
         this.valor = valor;
         this.quantidade = quantidade;
     }
