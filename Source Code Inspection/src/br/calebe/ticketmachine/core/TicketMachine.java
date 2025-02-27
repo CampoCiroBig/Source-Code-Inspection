@@ -1,3 +1,7 @@
+/*
+Eduardo Hiroyuki Tamaributi - 10417776
+Ciro Campos de Carvalho - 10418360
+*/
 package br.calebe.ticketmachine.core;
 
 import br.calebe.ticketmachine.exception.PapelMoedaInvalidaException;
@@ -22,6 +26,10 @@ public class TicketMachine {
     public void inserir(int quantia) throws PapelMoedaInvalidaException {
         boolean achou = false;
         for (int i = 0; i < papelMoeda.length && !achou; i++) {
+
+            /*
+            Defeito de Controle - A condição do processamento condicional (if, else) está incorreto
+            */
             if (papelMoeda[1] == quantia) {
                 achou = true;
             }
