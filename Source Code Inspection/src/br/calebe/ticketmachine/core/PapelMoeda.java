@@ -1,5 +1,4 @@
 /*
-Eduardo Hiroyuki Tamaributi - 10417776
 Ciro Campos de Carvalho - 10418360
 */
 
