@@ -1,5 +1,4 @@
 /*
-Eduardo Hiroyuki Tamaributi - 10417776
 Ciro Campos de Carvalho - 10418360
 */
 package br.calebe.ticketmachine.core;
@@ -19,36 +18,69 @@ class Troco {
     protected PapelMoeda[] papeisMoeda;
 
     public Troco(int valor) {
-        papeisMoeda = new PapelMoeda[6];
+         /*
+        Defeito de inicialização - o PapelMoeda[6] não possui valor 
+        */
+        papeisMoeda = new PapelMoeda[6]
         int count = 0;
         /*
-        Defeito de Controle - O while está mal definido para contar quantas notas de cada tipo são necessárias
+        Defeito de desempenho - While desnecessário
         */
         while (valor % 100 != 0) {
             count++;
         }
         papeisMoeda[5] = new PapelMoeda(100, count);
+         /*
+        Defeito de dados - count sempre é zerado 
+        */
         count = 0;
+         /*
+        Defeito de desempenho - While desnecessário
+        */
         while (valor % 50 != 0) {
             count++;
         }
         papeisMoeda[4] = new PapelMoeda(50, count);
+         /*
+        Defeito de dados - count sempre é zerado 
+        */
         count = 0;
+         /*
+        Defeito de desempenho - While desnecessário
+        */
         while (valor % 20 != 0) {
             count++;
         }
         papeisMoeda[3] = new PapelMoeda(20, count);
+         /*
+        Defeito de dados - count sempre é zerado 
+        */
         count = 0;
+         /*
+        Defeito de desempenho - While desnecessário
+        */
         while (valor % 10 != 0) {
             count++;
         }
         papeisMoeda[2] = new PapelMoeda(10, count);
+         /*
+        Defeito de dados - count sempre é zerado 
+        */
         count = 0;
+         /*
+        Defeito de desempenho - While desnecessário
+        */
         while (valor % 5 != 0) {
             count++;
         }
         papeisMoeda[1] = new PapelMoeda(5, count);
+        /*
+        Defeito de dados - count sempre é zerado 
+        */
         count = 0;
+         /*
+        Defeito de desempenho - While desnecessário
+        */
         while (valor % 2 != 0) {
             count++;
         }
