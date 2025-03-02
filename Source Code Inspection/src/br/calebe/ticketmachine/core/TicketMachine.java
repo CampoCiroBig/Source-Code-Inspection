@@ -1,5 +1,4 @@
 /*
-Eduardo Hiroyuki Tamaributi - 10417776
 Ciro Campos de Carvalho - 10418360
 */
 package br.calebe.ticketmachine.core;
@@ -14,6 +13,10 @@ import java.util.Iterator;
  */
 public class TicketMachine {
 
+    /*
+    Defeito de ambiguidade - os protected não fazem sentido pois não usados nos outros objetos dentro da pasta
+    Defeioto de Incosistência - valor aparece em duas classes, ou seja, o protected continua sem sentido
+    */
     protected int valor;
     protected int saldo;
     protected int[] papelMoeda = {2, 5, 10, 20, 50, 100};
@@ -44,6 +47,9 @@ public class TicketMachine {
         return saldo;
     }
 
+    /*
+    Defeito de Dados - sempre retorna um null, sem motivo
+    */
     public Iterator<Integer> getTroco() {
         return null;
     }
